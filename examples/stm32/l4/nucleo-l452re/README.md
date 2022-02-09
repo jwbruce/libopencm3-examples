@@ -64,6 +64,10 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
 
 ## Future Examples
 
+foo -- based on the *f4/stm32f4-discovery/usart*
+
+foo -- based on the *f4/stm32f4-discovery/usart-irq*
+
 foo -- based on the *f4/stm32f4-discovery/adc-dac-printf*
 
 foo -- based on the *f4/stm32f4-discovery/mandelbrot*
@@ -71,6 +75,11 @@ foo -- based on the *f4/stm32f4-discovery/mandelbrot*
 foo -- based on the *f4/stm32f429i-discovery/random*
 
 foo -- based on the *f4/stm32f4-discovery/tick-blink*
+
+pwm -- tutorial using PWM function of timer on LD2 ?????
+
+ic -- tutorial using input capture to measure
+pulsewidth and/or frequency of B1 presses ?????
 
 adc -- a new tutorial using the ADC with 2.048V internal reference
 
