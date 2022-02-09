@@ -31,7 +31,7 @@
 /* Set STM32 to 80 MHz */
 static void clock_setup(void)
 {
-	//rcc_clock_setup_pll(&rcc_hse_8mhz_3v3[RCC_CLOCK_3V3_168MHZ]);
+	// use the high-speed internal 16MHz source
    	rcc_osc_on(RCC_HSI16);
 
 	/* 16MHz / 4 = > 4 * 40 = 160MHz VCO => 80MHz main pll  */
