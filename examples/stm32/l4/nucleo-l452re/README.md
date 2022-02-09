@@ -54,3 +54,20 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
     cd examples/stm32/l4/nucleo-l452re/blink
     make flash V=1
 
+## Examples
+
+foo -- based on the f4/stm32f4-discovery/adc-dac-printf
+
+foo -- based on the f4/stm32f4-discovery/button
+
+foo -- based on the f4/stm32f4-discovery/mandelbrot
+
+foo -- based on the f4/stm32f429i-discovery/random
+
+foo -- based on the f4/stm32f4-discovery/tick-blink
+
+adc -- a new tutorial using the ADC with 2.048V internal reference
+
+rtc -- a new tutorial to demonstrate the real-time clock peripheral
+
+wdg -- a new tutorial to demonstrate watchdog timer
