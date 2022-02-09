@@ -20,7 +20,7 @@
 
 BINARY = blink
 
-LDSCRIPT = ../nucleo-f452re.ld
+LDSCRIPT = ../nucleo-l452re.ld
 
 include ../../Makefile.include
 

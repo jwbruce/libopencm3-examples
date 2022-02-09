@@ -23,11 +23,8 @@
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
 
-/* the STM Nucleo-64 PCB connects the user LED */
-/* LD2 to GPIO pin PA5 through the SB42 solder jumper */
-/* See the Nucleo-64 schematic and/or users manual*/
-#define     LD2_PORT        GPIOA
-#define     LD2_PIN         GPIO5
+// include hardware mappings for Nucleo-L452RE board (STM32L452RE)
+#include "../nucleo-l452re.h"
 
 static void gpio_setup(void)
 {

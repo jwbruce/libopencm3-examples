@@ -18,7 +18,7 @@
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* Linker script for Nucleo F452RE  (STM32F452RE, 512K flash, 160K RAM). */
+/* Linker script for Nucleo L452RE  (STM32L452RE, 512K flash, 160K RAM). */
 
 /* Define memory regions. */
 MEMORY
