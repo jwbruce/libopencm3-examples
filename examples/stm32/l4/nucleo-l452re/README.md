@@ -1,0 +1,56 @@
+# README
+[![Build Status](https://travis-ci.org/libopencm3/libopencm3-examples.svg?branch=master)](https://travis-ci.org/libopencm3/libopencm3-examples)
+
+[![Gitter channel](https://badges.gitter.im/libopencm3/discuss.svg)](https://gitter.im/libopencm3/discuss)
+
+This folder contains assorted example projects for libopencm3 targeting
+the Nucleo-L452RE (STM32L452RE) evaluation board from ST Microelectronics.
+
+The libopencm3 project aims to create an open-source firmware library for
+various ARM Cortex-M microcontrollers.
+
+For more information visit http://libopencm3.org
+
+
+## Usage
+
+The folder ../../../../libopencm3 (relative to this folder) must
+contain the "made" (compliled) libopencm3 library.  Specifically,
+the library *libopencm3_stm32l4.a* for the STM32L452RE
+must be present down in this tree.  The most
+convenient and modular method of making this configuration is
+to "link" to the libopencm3 folder in your separate cloned
+repo of the most recent libopencm3.
+
+On linux, this is acheived by
+
+  * opening a terminal window in this folder
+  * executing *cd ../../../..* to move to the top-level folder
+    of this repo
+  * exectuing *rmdir libopencm3* to remove the existing empty folder
+  * executing *ln -s* <PATH_TO_YOUR_LIBOPENCM3> *libopencm3* to create
+    a symbolic link to the library in its repo.
+
+For each example, you must run "make" in the directory containing
+the example code.  Note that some examples require hardware to be
+connected to you Nucleo-L452RE board.  Other examples interact with
+the Nucleo-L452RE via the serial terminal.
+
+For more verbose output, to see compiler command lines, use "make V=1"
+For insanity levels of verboseness, use "make V=99"
+
+The makefiles are generally useable for your own projects with
+only minimal changes for the libopencm3 install path (See Reuse)
+
+## Make Flash Target
+
+Please note, the "make flash" target is complicated and
+not always self-consistent.
+Please see: https://github.com/libopencm3/libopencm3-examples/issues/34
+
+For flashing the 'blink' example (after you built libopencm3 described
+above) onto the ST Nucleo STM32L452RE eval board, you can execute:
+
+    cd examples/stm32/l4/nucleo-l452re/blink
+    make flash V=1
+
