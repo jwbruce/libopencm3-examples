@@ -25,5 +25,14 @@
 /* See the Nucleo-64 schematic and/or users manual*/
 #define     LD2_PORT        GPIOA
 #define     LD2_PIN         GPIO5
+#define     LD2_PORT_RCC    RCC_GPIOA
+
+/* the STM Nucleo-64 PCB connects the user button */
+/* B1 to GPIO pin PC13 through the SB17 solder jumper */
+/* See the Nucleo-64 schematic and/or users manual*/
+#define     B1_PORT         GPIOC
+#define     B1_PIN          GPIO13
+#define     B1_PORT_RCC     RCC_GPIOC
+
 
 #endif    // __NUCLEO_L452RE_H
