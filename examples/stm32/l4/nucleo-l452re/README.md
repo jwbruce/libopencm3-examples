@@ -1,7 +1,4 @@
 # README
-[![Build Status](https://travis-ci.org/libopencm3/libopencm3-examples.svg?branch=master)](https://travis-ci.org/libopencm3/libopencm3-examples)
-
-[![Gitter channel](https://badges.gitter.im/libopencm3/discuss.svg)](https://gitter.im/libopencm3/discuss)
 
 This folder contains assorted example projects for libopencm3 targeting
 the Nucleo-L452RE (STM32L452RE) evaluation board from ST Microelectronics.
