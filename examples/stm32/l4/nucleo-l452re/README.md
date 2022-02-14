@@ -16,7 +16,7 @@ contain the "made" (compliled) libopencm3 library.  Specifically,
 the library *libopencm3_stm32l4.a* for the STM32L452RE
 must be present down in this tree.  The most
 convenient and modular method of making this configuration is
-to "link" to the libopencm3 folder in your separate cloned
+to **link** to the libopencm3 folder in your separate cloned
 repo of the most recent libopencm3.
 
 On linux, this is acheived by
@@ -59,11 +59,14 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
     different rates depending on the state of the user
     button **B1**
 
+  * usart_irq -- echos data received by UART 115200 baud (8N1);
+    flashes the user LED **LD2** upon each data byte RX-ed;
+    changes case of alphabetical data if user button **B1** is pressed
+
+
 ## Future Examples
 
 foo -- based on the *f4/stm32f4-discovery/usart*
-
-foo -- based on the *f4/stm32f4-discovery/usart-irq*
 
 foo -- based on the *f4/stm32f4-discovery/adc-dac-printf*
 
