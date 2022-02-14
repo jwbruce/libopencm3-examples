@@ -32,9 +32,8 @@
 // include hardware mappings for Nucleo-L452RE board (STM32L452RE)
 #include "../nucleo-l452re.h"
 
-// define some useful macros
-#define IS_UPPER(x) (x >= 'A' && x <= 'Z')
-#define LOWER(x) (x >= 'a' && x <= 'z')
+// locally defined macros go here
+
 
 /* Set STM32 to 80 MHz */
 static void clock_setup(void)
@@ -46,7 +45,6 @@ static void clock_setup(void)
 	rcc_set_main_pll(RCC_PLLCFGR_PLLSRC_HSI16, 4, 40,
 			0, 0, RCC_PLLCFGR_PLLR_DIV2);
 	rcc_osc_on(RCC_PLL);
-    
 }
 
 
@@ -117,7 +115,7 @@ void usart2_isr(void)
 
 
 		/* Retrieve the data from the peripheral. */
-	    data = usart_recv(USART2);
+ 	        data = usart_recv(USART2);
 
 		/* Enable transmit interrupt so it sends back the data. */
 		usart_enable_tx_interrupt(USART2);
@@ -130,10 +128,10 @@ void usart2_isr(void)
    		// if B1 button is pressed, then
         //     change case of any alphabetic characters
 		if (!gpio_get(B1_PORT, B1_PIN)) {
-            if (isupper(data))
-                data = tolower(data);
-            else if (islower(data))
-                data = toupper(data);
+                   if (isupper(data))
+                     data = tolower(data);
+                   else if (islower(data))
+                     data = toupper(data);
         }
 
         /* Put data into the transmit register to send data */
@@ -148,7 +146,7 @@ int main(void)
 {
 	clock_setup();
 	led_setup();
-    button_setup();
+	button_setup();
 	usart_setup();
 
 	while (true) {
