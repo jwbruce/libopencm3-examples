@@ -90,3 +90,10 @@ adc -- a new tutorial using the ADC with 2.048V internal reference
 rtc -- a new tutorial to demonstrate the real-time clock peripheral
 
 wdg -- a new tutorial to demonstrate watchdog timer
+
+## Other Future Work
+
+After building a complete set of examples for the Nucleo-L452RE
+(based on the Nucleo-64 PCB from ST), adapt the examples with
+appropriate header files to run on *any* Nucleo-64 based evaluation
+board.
