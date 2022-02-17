@@ -59,6 +59,10 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
     different rates depending on the state of the user
     button **B1**
 
+  * timer -- flashes the user LED **LD2** with a Morse code
+    pattern for SOS (dot-dot-dot dash-dash-dash dot-dot-dot)
+    using the TIM2 peripheral
+
   * usart_irq -- echos data received by UART 115200 baud (8N1);
     flashes the user LED **LD2** upon each data byte RX-ed;
     changes case of alphabetical data if user button **B1** is pressed
