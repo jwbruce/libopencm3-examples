@@ -27,7 +27,6 @@
 #include <libopencm3/stm32/timer.h>
 #include <libopencm3/cm3/nvic.h>
 
-
 // include hardware mappings for Nucleo-L452RE board (STM32L452RE)
 #include "../nucleo-l452re.h"
 
@@ -37,7 +36,7 @@
 #endif
 
 /* Morse standard timings */
-#define ELEMENT_TIME 500
+#define ELEMENT_TIME        500     // need to define where magic # comes from
 #define DIT (1*ELEMENT_TIME)
 #define DAH (3*ELEMENT_TIME)
 #define INTRA (1*ELEMENT_TIME)
@@ -68,7 +67,7 @@ uint16_t frequency_sequence[] = {
 
 int frequency_sel = 0;
 
-
+// CODE: FUNCTIONS AND MAIN() GO BELOW THIS LINE
 
 /* Set STM32 to 80 MHz */
 static void clock_setup(void)
@@ -81,7 +80,6 @@ static void clock_setup(void)
 			0, 0, RCC_PLLCFGR_PLLR_DIV2);
 	rcc_osc_on(RCC_PLL);
 }
-
 
 static void timer_setup(void)
 {
