@@ -108,14 +108,14 @@ void usart2_isr(void)
 
 	/* Check if we were called because of RXNE. */
 	if (((USART_CR1(USART2) & USART_CR1_RXNEIE) != 0) &&
-	   (usart_get_flag(USART2,USART_ISR_RXNE) != 0)) {
+	   (usart_get_flag(USART2,USART_ISR_RXNE))) {
         
 		/* Indicate that we got data. */
 		gpio_toggle(LD2_PORT, LD2_PIN);
 
 
 		/* Retrieve the data from the peripheral. */
- 	        data = usart_recv(USART2);
+        data = usart_recv(USART2);
 
 		/* Enable transmit interrupt so it sends back the data. */
 		usart_enable_tx_interrupt(USART2);
@@ -123,7 +123,7 @@ void usart2_isr(void)
 
 	/* Check if we were called because of TXE. */
 	if (((USART_CR1(USART2) & USART_CR1_TXEIE) != 0) &&
-	    (usart_get_flag(USART2,USART_ISR_TXE) != 0)) {
+	    (usart_get_flag(USART2,USART_ISR_TXE))) {
 
    		// if B1 button is pressed, then
         //     change case of any alphabetic characters
