@@ -85,10 +85,12 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
     flashes the user LED **LD2** upon each data byte RX-ed;
     changes case of alphabetical data if user button **B1** is pressed
 
+## TODOs
+
+  * add better (and correct) comment/doxygen to the above examples
+
 
 ## Future Examples
-
-foo -- based on the *f4/stm32f4-discovery/usart*
 
 foo -- based on the *f4/stm32f4-discovery/adc-dac-printf*
 
@@ -97,10 +99,6 @@ foo -- based on the *f4/stm32f4-discovery/mandelbrot*
 foo -- based on the *f4/stm32f429i-discovery/random*
 
 foo -- based on the *f4/stm32f4-discovery/tick-blink*
-
-pwm -- tutorial using PWM function of timer on LD2. LD2 is connected
-  to GPIO pin A5 which serves as TIM2_CH1 (via AF1).  See Table 17
-  in the L452 datasheet
 
 ic -- tutorial using input capture to measure
 pulsewidth and/or frequency of B1 presses ?????
