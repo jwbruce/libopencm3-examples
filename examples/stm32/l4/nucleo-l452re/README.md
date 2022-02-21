@@ -59,9 +59,27 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
     different rates depending on the state of the user
     button **B1**
 
+  * pwm1 -- periodically changes the brightness of **LD2**
+    via pulse-width-modulation (PWM) on TIM2_CH1.
+
+  * pwm2 -- changes the brightness of **LD2** via PWM
+    based on characters received (115.2k/8N1) via UART.
+    PWM value is returned over UART.
+	Sends are done in a blocking way.
+    Receives do not block.
+
   * timer -- flashes the user LED **LD2** with a Morse code
     pattern for SOS (dot-dot-dot dash-dash-dash dot-dot-dot)
     using the TIM2 peripheral
+
+  * usart1 -- sends (115.2k/8N1) repeating sequence of characters
+    on UART.  Send is done in a blocking way.
+
+  * usart2 -- sends (115.2k/8N1) two different sets of
+    repeating sequence of characters on UART.
+    The output character sequence changes based on data
+    received on UART. Sends are done in a blocking way.
+    Receives do not block.
 
   * usart_irq -- echos data received by UART 115200 baud (8N1);
     flashes the user LED **LD2** upon each data byte RX-ed;
