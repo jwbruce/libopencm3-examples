@@ -107,7 +107,7 @@ foo -- based on the *f4/stm32f4-discovery/tick-blink*
 *ic* -- tutorial using input capture to measure
 pulsewidth and/or frequency of B1 presses ?????
 
-*ext_timer* -- tutorial using timer with external trigger input
+*ext_timer* -- a new tutorial using timer with external trigger input
 to count the edges from a pin, *e.g.* count bounces on user
 button **B1** presses during a short window (15-25ms)
 
@@ -115,7 +115,11 @@ button **B1** presses during a short window (15-25ms)
 to measure ???? (anything internal to measure? Attach an inexpensive
 sensor like a CdS cell or thermistor or pot)
 
-*reset* -- short program to determine the reset source upon boot and
+*dac* -- a new tutorial using the built-in DAC to generate one (or
+more) voltage waveforms.  Possibly adjust characteristics of the
+waveform via **B1** or the UART
+
+*reset* -- a new tutorial program to determine the reset source upon boot and
 print to UART (provide a **B1** or UART method to cause code to run
 to create a myriad of reset conditions)
 
@@ -133,5 +137,7 @@ appropriate header files to run on *any* Nucleo-64 based evaluation
 board.
 
 Adapt as many of the above examples (as appropriate) to the small
-Nucleo board (Nucleo-F031K6 and Nucleo-L031K6) used in the
-Tennessee Tech program 
+Nucleo board (**Nucleo-F031K6** and **Nucleo-L031K6**) used in the
+Tennessee Tech program.  Should be able (with some connected
+hardware) to adapt all of these programs, except *mandelbrot* and 
+*dac* as F0 and L0 parts do not have a FPU or DACs.
