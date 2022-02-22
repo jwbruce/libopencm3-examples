@@ -107,11 +107,22 @@ foo -- based on the *f4/stm32f4-discovery/tick-blink*
 ic -- tutorial using input capture to measure
 pulsewidth and/or frequency of B1 presses ?????
 
+ext. timer -- tutorial using timer with external trigger input
+to count the edges from a pin, *e.g.* count bounces on user
+button **B1** presses during a short window (15-25ms)
+
 adc -- a new tutorial using the ADC with 2.048V internal reference
+to measure ????
+
+reset -- short program to determine the reset source upon boot and
+print to UART (provide a **B1** or UART method to cause code to run
+to create a myriad of reset conditions)
 
 rtc -- a new tutorial to demonstrate the real-time clock peripheral
+(use serial port to set and display RTC information???)
 
-wdg -- a new tutorial to demonstrate watchdog timer
+wdg -- a new tutorial to demonstrate watchdog timer (user must press
+button **B1** often enough to prevent WDG timeout)
 
 ## Other Future Work
 
@@ -119,3 +130,7 @@ After building a complete set of examples for the Nucleo-L452RE
 (based on the Nucleo-64 PCB from ST), adapt the examples with
 appropriate header files to run on *any* Nucleo-64 based evaluation
 board.
+
+Adapt as many of the above examples (as appropriate) to the small
+Nucleo board (Nucleo-F031K6 and Nucleo-L031K6) used in the
+Tennessee Tech program 
