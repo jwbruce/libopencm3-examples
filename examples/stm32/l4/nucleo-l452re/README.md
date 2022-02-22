@@ -59,7 +59,7 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
     different rates depending on the state of the user
     button **B1**
 
-  * mandel -- demonstrate the floating-point capability and speed
+  * mandelbrot -- demonstrate the floating-point capability and speed
     of the STM32L452RE processor by computing the Mandelbrot set
     and "drawing" the famous Mandelbrot "beetle" by sending
     (115.2k/8N1) ASCII art to the UART.
