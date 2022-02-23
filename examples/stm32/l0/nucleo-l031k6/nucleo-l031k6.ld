@@ -3,7 +3,7 @@
  *
  * Copyright (C) 2009 Uwe Hermann <uwe@hermann-uwe.de>
  * Copyright (C) 2011 Stephen Caudle <scaudle@doceme.com>
- * Copyright (C) 2022 J.W. Bruce <jwbruce@ieee.org> 
+ * Copyright (C) 2022 J.W. Bruce <jwbruce@ieee.org>
  *
  * This library is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -19,15 +19,14 @@
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* Linker script for Nucleo-L452RE  (STM32L452RE, 512K flash, 160K RAM). */
+/* Linker script for Nucleo-L031K6  (STM32L031K6, 32K flash, 8K RAM) */
 
 /* Define memory regions. */
 MEMORY
 {
-	rom (rx) : ORIGIN = 0x08000000, LENGTH = 512K
-	ram (rwx) : ORIGIN = 0x20000000, LENGTH = 160K
+	rom (rx) : ORIGIN = 0x08000000, LENGTH = 32K
+	ram (rwx) : ORIGIN = 0x20000000, LENGTH = 8K
 }
 
 /* Include the common ld script. */
 INCLUDE cortex-m-generic.ld
-
