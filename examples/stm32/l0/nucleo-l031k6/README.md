@@ -3,6 +3,10 @@
 This folder contains assorted example projects for libopencm3 targeting
 the Nucleo-L031K6 (STM32L031K6) evaluation board from ST Microelectronics.
 
+The STM32L031K6 is a member of ST Microelectronics' access line
+ultra-low-power 32-bit MCU Arm-based Cortex-M0+, with 32KB Flash,
+8KB SRAM, 1KB EEPROM, ADC
+
 The libopencm3 project aims to create an open-source firmware library for
 various ARM Cortex-M microcontrollers.
 
@@ -66,40 +70,33 @@ above) onto the ST Nucleo STM32L031K6 eval board, you can execute:
 
 ## Future Examples
 
-  * blink -- flashes the user LED **LD2**
+  * blink -- flashes the user LED **LD3**
 
-  * button -- flashes the user LED **LD2** at two
-    different rates depending on the state of the user
-    button **B1**
+  * button -- flashes the user LED **LD3** at two
+    different rates depending on the state of an externally-
+    installed user button
 
-  * mandel -- demonstrate the floating-point capability and speed
-    of the STM32L452RE processor by computing the Mandelbrot set
-    and "drawing" the famous Mandelbrot "beetle" by sending
-    (115.2k/8N1) ASCII art to the UART.
-    Sending is done in a blocking way.
+  * pwm1 -- periodically changes the brightness of **LD3**
+    via pulse-width-modulation (PWM).
 
-  * pwm1 -- periodically changes the brightness of **LD2**
-    via pulse-width-modulation (PWM) on TIM2_CH1.
-
-  * pwm2 -- changes the brightness of **LD2** via PWM
+  * pwm2 -- changes the brightness of **LD3** via PWM
     based on characters received (115.2k/8N1) via UART.
     PWM value is returned over UART.
 	Sends are done in a blocking way.
     Receives do not block.
 
-  * timer -- flashes the user LED **LD2** with a Morse code
+  * timer -- flashes the user LED **LD3** with a Morse code
     pattern for SOS (dot-dot-dot dash-dash-dash dot-dot-dot)
-    using the TIM2 peripheral
+    using the TIMER peripheral
 
   * usart1 -- sends (115.2k/8N1) repeating sequence of characters
     on UART.  Send is done in a blocking way.
 
   * usart_irq -- echos data received by UART 115200 baud (8N1);
     flashes the user LED **LD2** upon each data byte RX-ed;
-    changes case of alphabetical data if user button **B1** is pressed
+    changes case of alphabetical data if externally-
+    installed user button is pressed
 
-
-foo -- based on the *f4/stm32f429i-discovery/random*
 
 foo -- based on the *f4/stm32f4-discovery/tick-blink*
 
@@ -107,6 +104,8 @@ ic -- tutorial using input capture to measure
 pulsewidth and/or frequency of B1 presses ?????
 
 adc -- a new tutorial using the ADC with 2.048V internal reference
+
+crc -- a new tutorial demonstrating the CRC generation peripheral
 
 rtc -- a new tutorial to demonstrate the real-time clock peripheral
 
