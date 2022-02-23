@@ -93,23 +93,22 @@ above) onto the ST Nucleo STM32L031K6 eval board, you can execute:
     on UART.  Send is done in a blocking way.
 
   * usart_irq -- echos data received by UART 115200 baud (8N1);
-    flashes the user LED **LD2** upon each data byte RX-ed;
+    flashes the user LED **LD3** upon each data byte RX-ed;
     changes case of alphabetical data if externally-
     installed user button is pressed
 
+  * foo -- based on the *f4/stm32f4-discovery/tick-blink*
 
-foo -- based on the *f4/stm32f4-discovery/tick-blink*
+  * ic -- tutorial using input capture to measure
+    pulsewidth and/or frequency of B1 presses ?????
 
-ic -- tutorial using input capture to measure
-pulsewidth and/or frequency of B1 presses ?????
+  * adc -- a new tutorial using the ADC with 2.048V internal reference
 
-adc -- a new tutorial using the ADC with 2.048V internal reference
+  * crc -- a new tutorial demonstrating the CRC generation peripheral
 
-crc -- a new tutorial demonstrating the CRC generation peripheral
+  * rtc -- a new tutorial to demonstrate the real-time clock peripheral
 
-rtc -- a new tutorial to demonstrate the real-time clock peripheral
-
-wdg -- a new tutorial to demonstrate watchdog timer
+  * wdg -- a new tutorial to demonstrate watchdog timer
 
 ## Other Future Work
 
