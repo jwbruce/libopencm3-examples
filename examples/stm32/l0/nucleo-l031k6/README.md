@@ -57,6 +57,8 @@ above) onto the ST Nucleo STM32L031K6 eval board, you can execute:
 
 ## Completed Examples
 
+  * *blink* -- flashes the user LED **LD3**
+
   * *usart2* -- sends (115.2k/8N1) two different sets of
     repeating sequence of characters on UART.
     The output character sequence changes based on data
@@ -69,8 +71,6 @@ above) onto the ST Nucleo STM32L031K6 eval board, you can execute:
 
 
 ## Future Examples
-
-  * blink -- flashes the user LED **LD3**
 
   * button -- flashes the user LED **LD3** at two
     different rates depending on the state of an externally-
