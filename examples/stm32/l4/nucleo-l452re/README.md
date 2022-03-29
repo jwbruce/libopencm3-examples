@@ -73,6 +73,9 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
     PWM value is returned over UART.
 	Sends are done in a blocking way.
     Receives do not block.
+    
+  * tick_blink -- flashes the user LED **LD2** using
+    the systick timer to generate time accurate delays/interrupts.
 
   * timer -- flashes the user LED **LD2** with a Morse code
     pattern for SOS (dot-dot-dot dash-dash-dash dot-dot-dot)
@@ -101,8 +104,6 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
 foo -- based on the *f4/stm32f4-discovery/adc-dac-printf*
 
 foo -- based on the *f4/stm32f429i-discovery/random*
-
-foo -- based on the *f4/stm32f4-discovery/tick-blink*
 
 *ic* -- tutorial using input capture to measure
 pulsewidth and/or frequency of B1 presses ?????
