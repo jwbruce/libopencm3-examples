@@ -38,7 +38,7 @@ static void clock_setup(void)
 	rcc_set_main_pll(RCC_PLLCFGR_PLLSRC_HSI16, 4, 40,
 			0, 0, RCC_PLLCFGR_PLLR_DIV2);
 	rcc_osc_on(RCC_PLL);
-    
+
 }
 
 static void led_setup(void)
@@ -72,15 +72,18 @@ int main(void)
 	while (true) {
 		gpio_toggle(LD2_PORT, LD2_PIN);
 
-		/* Upon button press, blink more slowly. */
-		if (gpio_get(B1_PORT, B1_PIN)) {
-            // Wait a bit.....
-			for (u32_i = 0; u32_i < 200000; u32_i++) {	
+		/*
+     * Upon button press, blink more slowly.
+     * B1 pressed -> returns 0, B1 not pressed -> returns 1
+     */
+		if (!gpio_get(B1_PORT, B1_PIN)) {
+      /* Wait a bit..... */
+			for (u32_i = 0; u32_i < 200000; u32_i++) {
 				__asm__("nop");
 			}
 		}
-        // Wait a bit more...
-		for (u32_i = 0; u32_i < 100000; u32_i++) {		
+    /* Wait a bit more... */
+		for (u32_i = 0; u32_i < 100000; u32_i++) {
 			__asm__("nop");
 		}
 	}
