@@ -21,11 +21,6 @@
  * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* This version derived from fancy blink */
-#ifndef STM32L4
-    #define STM32L4
-#endif
-
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>
 #include <libopencm3/cm3/nvic.h>
@@ -56,7 +51,13 @@ static void msleep(uint32_t delay)
 /* Set up a timer to create 1mS ticks. */
 static void systick_setup(void)
 {
-	/* clock rate / 20 / 1000 to get 1mS interrupt rate */
+  /*
+   * clock rate / 20 / 1000 to get 1mS interrupt rate
+   *
+   * The VCO input frequency (PLL input frequency / PLLM) feeds into the
+   * systick timer, which is why (clock rate / 20) is the systick frequency
+   */
+	systic
 	systick_set_reload(4000);
 	systick_set_clocksource(STK_CSR_CLKSOURCE_AHB);
 	systick_counter_enable();
