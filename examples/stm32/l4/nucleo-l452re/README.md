@@ -58,6 +58,10 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
   * button -- flashes the user LED **LD2** at two
     different rates depending on the state of the user
     button **B1**
+    
+  * iwdg -- demonstrate use of independent watchdog timer by
+    requiring that the user must press button **B1** often enough
+    to prevent WDG timeout and keep **LD2** on
 
   * mandelbrot -- demonstrate the floating-point capability and speed
     of the STM32L452RE processor by computing the Mandelbrot set
@@ -126,9 +130,6 @@ to create a myriad of reset conditions)
 
 *rtc* -- a new tutorial to demonstrate the real-time clock peripheral
 (use serial port to set and display RTC information???)
-
-*wdg* -- a new tutorial to demonstrate watchdog timer (user must press
-button **B1** often enough to prevent WDG timeout)
 
 ## Other Future Work
 
