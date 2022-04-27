@@ -93,6 +93,9 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
     The output character sequence changes based on data
     received on UART. Sends are done in a blocking way.
     Receives do not block.
+    
+  * usart3 -- sends (115.2k/8N1) an entire string of
+    characters on UART at once. Send is done in a blocking way.
 
   * usart_irq -- echos data received by UART 115200 baud (8N1);
     flashes the user LED **LD2** upon each data byte RX-ed;
@@ -105,9 +108,9 @@ above) onto the ST Nucleo STM32L452RE eval board, you can execute:
 
 ## Future Examples
 
-foo -- based on the *f4/stm32f4-discovery/adc-dac-printf*
+*adc-dac-prinf* -- based on the *f4/stm32f4-discovery/adc-dac-printf*
 
-foo -- based on the *f4/stm32f429i-discovery/random*
+*random* -- based on the *f4/stm32f429i-discovery/random*
 
 *ic* -- tutorial using input capture to measure
 pulsewidth and/or frequency of B1 presses ?????
