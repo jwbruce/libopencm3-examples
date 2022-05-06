@@ -37,7 +37,7 @@ static void clock_setup(void)
 		                 0, 0, RCC_PLLCFGR_PLLR_DIV4);
     rcc_osc_on(RCC_PLL);
 
-    /* Turns on high-speed intenral 48 MHz clock for RNG clock */
+    /* Turns on high-speed internal 48 MHz clock for RNG clock */
     rcc_osc_on(RCC_HSI48);
     rcc_periph_clock_enable(RCC_RNG);
 }
